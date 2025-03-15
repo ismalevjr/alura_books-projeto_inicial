@@ -4,6 +4,8 @@ const elementoParaInsercaoLivros = document.getElementById("livros");
 
 // Função para que consigamos exibir os livros capturados pela requisição na tela 
 function exibirLivrosNaTela(listaDeLivros){
+    // garantimos que assim que chamamos as funções nosso elemento virá com a lista vazia
+    elementoParaInsercaoLivros.innerHTML = "";
     // Utilizando o forEach visando definir o mesmo processo para os itens do array
     listaDeLivros.forEach(livro => {
 

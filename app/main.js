@@ -11,12 +11,15 @@ async function getBuscarLivrosDaAPI() {
     const res = await fetch(endpointDaAPI);
 
     // declarando em nosso array os dados de nosso endpoint como json, visnado a manipulação deste dados
-    livros = await res.json()
+    livros = await res.json();
 
+    // Declarando uma variável para que possamos chamar nossa funcionalidade de aplicação de desconto 
     const livrosComDesconto = aplicarDesconto(livros);
 
     // Chamando a função para exibir os livros na tela
      exibirLivrosNaTela(livrosComDesconto);
+
+
 }
 
 
